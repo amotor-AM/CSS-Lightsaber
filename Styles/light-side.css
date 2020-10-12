@@ -1,0 +1,490 @@
+*,
+*:before,
+*:after {
+  position: relative;
+  box-sizing: border-box;
+}
+
+.container,
+.dark-side {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1f1e1e;
+}
+
+.lightsaber {
+  width: 30vw;
+  height: 5vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.light-pommel-cap {
+  height: 70%;
+  width: 2%;
+  border-radius: 100% 0 0 100% / 20%;
+  -webkit-border-radius: 100% 0 0 100% / 20%;
+  -moz-border-radius: 100% 0 0 100% / 20%;
+  -ms-border-radius: 100% 0 0 100% / 20%;
+  -o-border-radius: 100% 0 0 100% / 20%;
+}
+
+.light-grip {
+  height: 100%;
+  width: 53%;
+  border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+  -webkit-border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+  -moz-border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+  -ms-border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+  -o-border-radius: 5% 5% 5% 5% / 10% 10% 10% 10%;
+}
+
+.light-controls {
+  height: 25%;
+  width: 50%;
+  position: absolute;
+  left: 45%;
+  bottom: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.light-controls:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 100%;
+  background: black;
+  border-radius: 20% 20% 20% 20% / 20% 20% 0% 0%;
+  -webkit-border-radius: 20% 20% 20% 20% / 20% 20% 0% 0%;
+  -moz-border-radius: 20% 20% 20% 20% / 20% 20% 0% 0%;
+  -ms-border-radius: 20% 20% 20% 20% / 20% 20% 0% 0%;
+  -o-border-radius: 20% 20% 20% 20% / 20% 20% 0% 0%;
+}
+
+.light-controls>.button {
+  background: black;
+  height: 0.6vw;
+  width: 0.6vw;
+  z-index: -1;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.button.silver {
+  background-color: #c0c0c0;
+}
+
+.button.green {
+  background-color: #117305;
+}
+
+.button.red {
+  background-color: #a8141e;
+}
+
+.light-hilt {
+  height: 80%;
+  width: 35%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.light-hilt>.segment {
+  width: 8%;
+  height: 100%;
+  flex-grow: 1;
+  border-radius: 25% 25% 25% 25% / 10% 10% 10% 10%;
+  -webkit-border-radius: 25% 25% 25% 25% / 10% 10% 10% 10%;
+  -moz-border-radius: 25% 25% 25% 25% / 10% 10% 10% 10%;
+  -ms-border-radius: 25% 25% 25% 25% / 10% 10% 10% 10%;
+  -o-border-radius: 25% 25% 25% 25% / 10% 10% 10% 10%;
+}
+
+.light-hilt>.segment.black-metal {
+  width: 20%;
+  height: 87.5%;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
+.light-focusing-ring {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  align-items: center;
+}
+
+.light-focusing-ring>.segment {
+  height: 60%;
+  width: 40%;
+}
+
+.light-focusing-ring>.metal {
+  width: 20%;
+  height: 80%;
+  border-radius: 25% 25% 25% 25% / 10% 10% 10% 10%;
+  -webkit-border-radius: 25% 25% 25% 25% / 10% 10% 10% 10%;
+  -moz-border-radius: 25% 25% 25% 25% / 10% 10% 10% 10%;
+  -ms-border-radius: 25% 25% 25% 25% / 10% 10% 10% 10%;
+  -o-border-radius: 25% 25% 25% 25% / 10% 10% 10% 10%;
+}
+
+.light-blade-emitter {
+  height: 100%;
+  width: 10%;
+  display: flex;
+  align-items: center;
+}
+
+.light-blade-emitter>.segment {
+  width: 40%;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.light-blade-emitter>.segment.small {
+  width: 20%;
+  height: 60%;
+}
+
+.light-blade-emitter>.segment.medium {
+  width: 67%;
+  height: 80%;
+  border-radius: 5% 26% 26% 5% / 10% 0% 0% 10%;
+  -webkit-border-radius: 5% 26% 26% 5% / 10% 0% 0% 10%;
+  -moz-border-radius: 5% 26% 26% 5% / 10% 0% 0% 10%;
+  -ms-border-radius: 5% 26% 26% 5% / 10% 0% 0% 10%;
+  -o-border-radius: 5% 26% 26% 5% / 10% 0% 0% 10%;
+}
+
+.light-blade-emitter>.segment.large {
+  width: 13%;
+  height: 100%;
+}
+
+.light-blade {
+  position: absolute;
+  height: 70%;
+  width: 300%;
+  left: 100%;
+  background: linear-gradient(to bottom,
+      #6edeed,
+      white 25%,
+      white 75%,
+      #6edeed);
+  border-top-right-radius: 10vw;
+  border-bottom-right-radius: 10vw;
+}
+
+.glow {
+  border: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 5vw #6edeed;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+
+.light-blade>.glow.large {
+  box-shadow: 0 0 40vw #6edeed;
+  opacity: 0.75%;
+}
+
+/* set the metal gradients for the lightsaber. This gives it the matallic look we want. We will define these here and then apply them to the different components as classes in the HTML */
+
+.metal {
+  background: linear-gradient(to bottom,
+      #ccdbee 12.5%,
+      hsla(216, 17%, 45%, 65%) 35%,
+      #ccdbee 70%,
+      #565657);
+}
+
+.black-metal {
+  background: linear-gradient(to bottom,
+      #767a83 10%,
+      #202432 35%,
+      #767a83 70%,
+      #191c27);
+}
+
+.copper {
+  background: linear-gradient(to bottom,
+      #70413a 10%,
+      #90645a 35%,
+      #70413a 70%,
+      #401f21);
+}
+
+/* Here is where we set our animations. This is where all the magic happens. Buckle up. There is a LOT of animating to do... */
+
+/* root sets our total animation style and time 
+I used cubic-bezier for this as it helps smooth out the animation of the individual elements so they are not choppy https://www.w3schools.com/cssref/func_cubic-bezier.asp*/
+:root {
+  --ease: cubic-bezier(0.5, 0, 0.2, 1);
+  --duration: 10s;
+  --speed: 0.75;
+}
+
+/* I decided to create animation variables for the animation delay, animation duration, and animation timing function for all elements using the "*" selector. This was my first time using a timing function. It should be noted that these variables are created here but the values will be defined on each individual object. 
+https://www.w3schools.com/cssref/css3_pr_animation-delay.asp
+https://www.w3schools.com/cssref/css3_pr_animation-duration.asp
+https://www.w3schools.com/cssref/css3_pr_animation-timing-function.asp 
+I almost forgot that I have to create an animation fill-mode here. This hides the elements from the screen so they are not visable until their animation is run. This is pretty cool! I was today years old when I discovered this!
+https://www.w3schools.com/cssref/css3_pr_animation-fill-mode.asp
+*/
+* {
+  animation-delay: var(--delay);
+  animation-duration: var(--duration);
+  animation-timing-function: var(--ease);
+  animation-fill-mode: both;
+}
+
+.light-pommel-cap {
+  --delay: 0s;
+  --duration: 1s;
+  animation-name: reverse-enter, fade-in;
+}
+
+.light-grip {
+  --delay: 0.3s;
+  --duration: 1s, 0.5s;
+  animation-name: enter, fade-in;
+}
+
+.light-controls {
+  --delay: 1.25s;
+  --duration: 1s, 0.5s;
+  animation-name: slide-down, fade-in;
+}
+
+/* Because we set an index for each segment in the HTML we can simplify the required CSS for the animation of this element to a single line. If we did not create an index we would have to use the :nth-child and make our code longer. */
+.light-hilt .segment {
+  --delay: calc(1.5s + (var(--i, 0) * 0.05s));
+  --duration: 1s, 1s;
+  animation-name: slide-up, fade-in;
+}
+
+.light-hilt .segment:nth-child(even) {
+  animation-name: slide-down, fade-in;
+}
+
+.light-focusing-ring .segment {
+  --delay: calc(2.5s + (var(--i, 0) * 0.05s));
+  --duration: 1s, 1s;
+  animation-name: enter, fade-in;
+}
+
+.light-blade-emitter .segment {
+  --delay: calc(3s + (var(--i, 0) * 0.05s));
+  --duration: 1s, 1s;
+  animation-name: enter, fade-in;
+}
+
+.lightsaber {
+  animation-name: lightsaber, lightsaber-out;
+  animation-fill-mode: backwards, forwards;
+  --ease: cubic-bezier(0.5, 0, 0.2, 1), cubic-bezier(0.82, -0.38, 0.14, 1.35);
+  --delay: 0s, 10s;
+  --duration: 10s, 1s;
+}
+
+.light-blade {
+  --delay: 4.5s;
+  --duration: 1s, 1s;
+  transform-origin: left center;
+  animation-name: blade, fade-in;
+}
+
+.light-blade .glow {
+  --delay: 4.5s;
+  --duration: 3s;
+  --ease: linear;
+  animation-name: flicker;
+  animation-iteration-count: infinite;
+}
+
+/* setting the keyframes for our animations */
+
+@keyframes scale-up {
+  from {
+    transform: scale(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes enter {
+  from {
+    transform: translateX(10vw);
+    -webkit-transform: translateX(10vw);
+    -moz-transform: translateX(10vw);
+    -ms-transform: translateX(10vw);
+    -o-transform: translateX(10vw);
+  }
+
+  to {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+}
+
+@keyframes reverse-enter {
+  from {
+    transform: translateX(-10vw);
+    -webkit-transform: translateX(-10vw);
+    -moz-transform: translateX(-10vw);
+    -ms-transform: translateX(-10vw);
+    -o-transform: translateX(-10vw);
+  }
+
+  to {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+}
+
+@keyframes slide-down {
+  from {
+    transform: translateY(-10vw);
+    -webkit-transform: translateY(-10vw);
+    -moz-transform: translateY(-10vw);
+    -ms-transform: translateY(-10vw);
+    -o-transform: translateY(-10vw);
+  }
+
+  to {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(10vw);
+    -webkit-transform: translateY(10vw);
+    -moz-transform: translateY(10vw);
+    -ms-transform: translateY(10vw);
+    -o-transform: translateY(10vw);
+  }
+
+  to {
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -ms-transform: none;
+    -o-transform: none;
+  }
+}
+
+@keyframes lightsaber {
+  from {
+    transform: translateX(10%);
+  }
+
+  22% {
+    transform: translateX(-15%);
+  }
+
+  30% {
+    transform: translateX(-30%);
+  }
+
+  45% {
+    transform: translateX(-40%) scale(0.9);
+    animation-timing-function: cubic-bezier(0.7, 0, 0, 1);
+  }
+
+  55%,
+  to {
+    transform: translateX(-100%) scale(0.7);
+    -webkit-transform: translateX(-100%) scale(0.7);
+    -moz-transform: translateX(-100%) scale(0.7);
+    -ms-transform: translateX(-100%) scale(0.7);
+    -o-transform: translateX(-100%) scale(0.7);
+  }
+}
+
+@keyframes lightsaber-out {
+  from {
+    transform: translateX(-100%) scale(0.7);
+  }
+
+  to {
+    transform: translateX(-100%) scale(0.7);
+  }
+}
+
+@keyframes blade {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes flicker {
+  20% {
+    opacity: 0.5;
+  }
+
+  40% {
+    opacity: 0.7;
+  }
+
+  60% {
+    opacity: 0.2;
+  }
+
+  80% {
+    opacity: 0.6;
+  }
+}

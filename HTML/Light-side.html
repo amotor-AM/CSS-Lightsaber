@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Light Side</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="/Styles/light-side.css" />
+  </head>
+  <body>
+    <audio
+      src="/sounds/Star Wars - The Force Theme (DJ AG Remix).mp3"
+      id="my_audio"
+    ></audio>
+    <script type="text/javascript">
+      window.onload = function () {
+        document.getElementById("my_audio").play();
+      };
+    </script>
+
+    <div class="light-side">
+      <div class="lightsaber">
+        <div class="light-pommel-cap metal"></div>
+        <div class="light-grip metal">
+          <div class="light-controls metal">
+            <div class="button"></div>
+            <div class="button silver"></div>
+            <div class="button red"></div>
+            <div class="button green"></div>
+          </div>
+        </div>
+        <!-- We have to add style indexes to the different elements in the hilt div so we can easily animate each one seperately. Otherwise it will create a LOT more work in our CSS.  -->
+        <div class="light-hilt">
+          <div style="--i: 0" class="segment black-metal"></div>
+          <div style="--i: 1" class="segment metal"></div>
+          <div style="--i: 2" class="segment black-metal"></div>
+          <div style="--i: 3" class="segment metal"></div>
+          <div style="--i: 4" class="segment black-metal"></div>
+          <div style="--i: 5" class="segment metal"></div>
+          <div style="--i: 6" class="segment black-metal"></div>
+          <div style="--i: 7" class="segment metal"></div>
+          <div style="--i: 8" class="segment black-metal"></div>
+          <div style="--i: 9" class="segment metal"></div>
+          <div style="--i: 10" class="segment black-metal"></div>
+          <div style="--i: 11" class="segment metal"></div>
+        </div>
+        <div class="light-focusing-ring">
+          <div style="--i: 0" class="segment black-metal"></div>
+          <div style="--i: 1" class="segment metal"></div>
+          <div style="--i: 2" class="segment copper"></div>
+        </div>
+        <div class="light-blade-emitter">
+          <div style="--i: 0" class="segment metal small"></div>
+          <div style="--i: 1" class="segment metal medium"></div>
+          <div style="--i: 2" class="segment metal large"></div>
+        </div>
+        <div class="light-blade">
+          <div class="glow"></div>
+          <div class="glow large"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
